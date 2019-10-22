@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		//第一种
+		// Array.prototype.unique = function() {
+		// 	var arr = [];
+		// 	// var err = [1,2,2,3,3,2]
+		// 	for (var i = 0; i < this.length; i++) { //遍历当前数组
+		// 		if(arr.indexOf(this[i]) == -1 ){  //当前数组的第i个值在新数组中找不到,则添加到新数组中去
+		// 			arr.push(this[i]);
+		// 		}
+		// 	}
+		// 	return arr;
+		// }
+		// var err = [1,3,3,4,5,5];
+		// console.log(err.unique())
+		
+		//第二种
+		// Array.prototype.unique = function() {
+		// 	var arr = [];
+		// 	var obj = {};
+		// 	for(var i = 0;i < this.length;i++){
+		// 		if(obj[this[i]] == undefined) {
+		// 			obj[this[i]] = 1;
+		// 			arr.push(this[i]);
+		// 		}
+		// 	}
+		// 	return arr;
+		// }
+		
+		//第三种
+		// Array.prototype.unique=function(){
+		// 	var arr=[];//新建一个临时数组
+		// 	for(var i=0;i<this.length;i++){  //遍历当前数组
+		// 		if(this.indexOf(this[i]==i)){//判断当前数组第i个值是否是第i个数，如果不是，代表数组前面已有相同的值。
+		// 			arr.push(this[i]);
+		// 　　　　　　}
+		// 　　　　}
+		// 　　　　return arr;
+		// };
+		
+		
+		//第四种
+		var ret = [];
+		var arrcc = [1,1,2,3,3,2];
+		function qc(ar) {
+			for(var i = 0, j = ar.length; i< j; i++){
+				if(ret.indexOf(ar[i]) === -1){
+					ret.push(ar[i]);
+				}
+			}
+			return ret;
+		}
+		qc(arrcc);
+		console.log(ret);
+	</script>
+</html>
